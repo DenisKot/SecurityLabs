@@ -50,6 +50,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM)).BeginInit();
@@ -251,11 +253,29 @@
             this.textBox8.Size = new System.Drawing.Size(209, 160);
             this.textBox8.TabIndex = 24;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 244);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Функция Ейлера (а):";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(132, 241);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(289, 20);
+            this.textBox9.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 261);
+            this.ClientSize = new System.Drawing.Size(444, 293);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox6);
@@ -312,6 +332,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
 

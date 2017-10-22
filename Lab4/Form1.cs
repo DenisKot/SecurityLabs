@@ -79,11 +79,29 @@
             }
 
             this.textBox8.Text = sb.ToString();
+
+            // Ejlera
+            this.textBox9.Text = this.EjleraFunction(this.A).ToString();
         }
 
         private bool EqualsByModule(long a, long b, long m)
         {
             return (a % m) == (b % m);
+        }
+
+        private long EjleraFunction(long n)
+        {
+            long result = n;
+            for (long i = 2; i * i <= n; ++i)
+                if (n % i == 0)
+                {
+                    while (n % i == 0)
+                        n /= i;
+                    result -= result / i;
+                }
+            if (n > 1)
+                result -= result / n;
+            return result;
         }
     }
 }
