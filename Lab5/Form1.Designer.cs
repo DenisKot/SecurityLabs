@@ -38,6 +38,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             // 
             this.buttonAnalyze.Location = new System.Drawing.Point(12, 161);
             this.buttonAnalyze.Name = "buttonAnalyze";
-            this.buttonAnalyze.Size = new System.Drawing.Size(548, 39);
+            this.buttonAnalyze.Size = new System.Drawing.Size(334, 62);
             this.buttonAnalyze.TabIndex = 0;
             this.buttonAnalyze.Text = "Аналізувати";
             this.buttonAnalyze.UseVisualStyleBackColor = true;
@@ -69,7 +70,7 @@
             this.Column3});
             this.dataGridView.Location = new System.Drawing.Point(566, 12);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(347, 188);
+            this.dataGridView.Size = new System.Drawing.Size(347, 210);
             this.dataGridView.TabIndex = 2;
             // 
             // Column1
@@ -93,22 +94,31 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 206);
+            this.chart1.Location = new System.Drawing.Point(12, 229);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(901, 300);
+            this.chart1.Size = new System.Drawing.Size(901, 277);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // richTextBoxResult
+            // 
+            this.richTextBoxResult.Location = new System.Drawing.Point(352, 161);
+            this.richTextBoxResult.Name = "richTextBoxResult";
+            this.richTextBoxResult.Size = new System.Drawing.Size(208, 61);
+            this.richTextBoxResult.TabIndex = 4;
+            this.richTextBoxResult.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 496);
+            this.Controls.Add(this.richTextBoxResult);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.richTextBox);
@@ -130,6 +140,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.RichTextBox richTextBoxResult;
     }
 }
 

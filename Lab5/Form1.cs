@@ -51,6 +51,9 @@ namespace Lab5
             this.dataGridView.Rows.Clear();
             this.chart1.Series.Clear();
 
+            //chart1.ChartAreas[0].AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            //chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            
             foreach (var item in dic)
             {
                 var val = set[item];
@@ -71,6 +74,22 @@ namespace Lab5
 
             this.chart1.Refresh();
             this.dataGridView.Refresh();
+
+            // Min
+            if (set.Count(x => x.Value == 0) > 3)
+            {
+                var strMin = string.Join(", ", set.Where(x => x.Value == 0).Select(x => $"{x.Key}({x.Value})"));
+                this.richTextBoxResult.Text = "Min: " + strMin + "\r\n";
+            }
+            else
+            {
+                var strMin = string.Join(", ", set.OrderBy(x => x.Value).Take(3).Select(x => $"{x.Key}({x.Value})"));
+                this.richTextBoxResult.Text = "Min: " + strMin + "\r\n";
+            }
+
+            // Max
+            var strMax = string.Join(", ", set.OrderByDescending(x => x.Value).Take(3).Select(x => $"\"{x.Key}\"({x.Value})"));
+            this.richTextBoxResult.Text += "Max: " + strMax + "\r\n";
         }
 
         private string GetPi(char item, Dictionary<char, long> dic, decimal n)
